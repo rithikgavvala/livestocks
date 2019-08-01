@@ -1,11 +1,19 @@
+import { hot } from 'react-hot-loader/root';
+
 import React from 'react';
 import '../css/App.css';
+import Login from './Login';
+
 
 function App() {
   return (
-        <h1>This is my mern boilerplate</h1>
+      <section className="login-background-container">
+
+              <Login />
+
+      </section>
 
   );
 }
 
-export default App;
+export default hot(App);
