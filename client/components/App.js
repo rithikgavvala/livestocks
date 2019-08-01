@@ -10,7 +10,6 @@ function App() {
       <section className="login-background-container">
 
               <Login />
-
       </section>
 
   );

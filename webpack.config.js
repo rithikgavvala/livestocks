@@ -51,6 +51,17 @@ module.exports = ({ mode } = { mode: "production" }) => {
         module: {
             rules: [
                 {
+                    test: /\.(js|jsx)$/,
+                    loader: 'babel-loader',
+                    exclude: /node_modules/,
+                    include: /src/
+                },
+                {
+                    test: /\.(js|jsx)$/,
+                    use: 'react-hot-loader/webpack',
+                    include: /node_modules/
+                },
+                {
                     test: /\.jpe?g|png$/,
                     exclude: /node_modules/,
                     loader: ["url-loader", "file-loader"]
